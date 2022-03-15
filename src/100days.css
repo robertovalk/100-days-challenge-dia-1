@@ -1,0 +1,93 @@
+body {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    color: #fff;
+}
+
+.quadrado {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%);
+    border-radius: 20px;
+}
+
+
+.quadrado h2 {
+    font-family: 'open sans', Helvetica, serif;
+    font-weight: bold;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.quadrado p {
+    font-family: 'open sans', Helvetica, serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.numeros {
+    display: flex;
+    font-size: 4.5rem;
+    font-family: 'open sans', Helvetica;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.numero1 {
+    height: 100%;
+    width: 25px;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transform: translateX(25px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,.5);
+    z-index: 3;
+}
+
+.numero1::before
+{
+	width: 85%;
+	height: 45%;
+	content: "";
+	position: absolute;
+	background-color: white;
+	transform-origin: left top;
+	transform: rotate(50deg) translate(2px, -5px) translateZ(-1px);
+	border-radius: 5px;
+}
+
+.numero0 {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.numero0:nth-child(2) {
+	transform: translateX(15px);
+	z-index: 2;
+}
+
+.numero0::before
+{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  content: "";
+  background-color: transparent;
+  border: 25px solid white;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0px 8px 20px rgba(0,0,0,.5);
+}
